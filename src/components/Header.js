@@ -1,12 +1,16 @@
 import React from 'react'
-import { StyledHeader } from './styles/Header.styled'
+import { StyledHeader, Nav } from './styles/Header.styled'
 import { Container } from './styles/Container.styled'
+import { Button } from './styles/Button.styled'
 
 const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <h1>Hubble</h1>
+                <Nav>
+                    <h1>Employee management App</h1>
+                    <Button>ADD Employee</Button>
+                </Nav>
             </Container>
         </StyledHeader>
     )
