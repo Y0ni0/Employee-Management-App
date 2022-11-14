@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Swal from 'sweetalert2';
-import { StyledFormWrapper, StyledForm, StyledInput, StyledFieldset, StyledButton, StyledAdd } from './styles/Add.styled';
+import { StyledFormWrapper, StyledForm, StyledInput, StyledFieldset, StyledButton } from './styles/Add.styled';
 import { Button } from './styles/Button.styled'
-import { Container } from './styles/Container.styled';
+
 
 function Add({ employees, setEmployees, setIsAdding }) {
 
