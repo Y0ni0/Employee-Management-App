@@ -8,29 +8,26 @@ export const StyledTableWrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin: 50px;
+    margin: 30px;
+    width: auto;
 `;
 export const STable = styled.table`
-    width: 100%;
+    width: 80%;
     background-color: ${lightTheme.bg};
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     border-collapse: collapse;
     text-align: center;
-    border-radius: 12px;
     overflow: hidden;
     border-collapse: collapse;
-    max-width: 100%;
 `;
 
 export const STHead = styled.thead`
-   position: sticky;
-    z-index: 100;
+    position: sticky;
     border-bottom: 2px solid;
     border-top: 2px solid;
     border-color: ${lightTheme.bg3};
-
 `;
 
 export const STHeadTR = styled.tr`
@@ -66,4 +63,5 @@ export const STD = styled.td`
     padding: 6px;
     border: 1px solid ${lightTheme.bg};
     font-size: 14px;
+    
 `;

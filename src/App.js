@@ -6,7 +6,8 @@ import Add from './components/Add';
 import { useState } from 'react'
 import List from './components/List';
 import { employees } from './components/Data';
-import { lightTheme } from './components/styles/theme';
+import Dashboard from './components/Dashboard';
+
 
 const theme = {
     colors: {
@@ -16,22 +17,14 @@ const theme = {
     }
 }
 function App() {
-    const [employeesData, setData] = useState(employees)
+    //  const [employeesData, setData] = useState(employees)
 
 
-    const [isAdding, setIsAdding] = useState(false);
+    // const [isAdding, setIsAdding] = useState(false);
 
     return (
         <ThemeProvider theme={theme}>
-            <>
-                <GlobalStyles />
-                {isAdding}
-                <Header isAdding={setIsAdding} />
-                <Container>
-                    <Add />
-                    <List employeesData={employeesData} />
-                </Container>
-            </>
+            <Dashboard />
         </ThemeProvider>
     )
 }

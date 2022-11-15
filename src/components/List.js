@@ -3,7 +3,7 @@ import { Button } from './styles/Button.styled';
 
 import { STable, STHead, STHeadTR, STH, STD, STBody, STBodyTR, StyledTableWrapper } from './styles/STable.styled';
 
-const List = ({ employeesData, handleEdit, handleDelete }) => {
+const List = ({ employees, handleEdit, handleDelete }) => {
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -29,26 +29,26 @@ const List = ({ employeesData, handleEdit, handleDelete }) => {
                     </STHeadTR>
                 </STHead>
                 <STBody>
-                    {employeesData.length > 0 ? (
-                        employeesData.map((employeesData, i) => (
-                            <STBodyTR key={employeesData.id}>
+                    {employees.length > 0 ? (
+                        employees.map((employees, i) => (
+                            <STBodyTR key={employees.id}>
                                 <STD>{i + 1}</STD>
-                                <STD>{employeesData.firstName}</STD>
-                                <STD>{employeesData.lastName}</STD>
-                                <STD>{employeesData.email}</STD>
-                                <STD>{employeesData.gender}</STD>
-                                <STD>{formatter.format(employeesData.salary)}</STD>
-                                <STD>{employeesData.date} </STD>
+                                <STD>{employees.firstName}</STD>
+                                <STD>{employees.lastName}</STD>
+                                <STD>{employees.email}</STD>
+                                <STD>{employees.gender}</STD>
+                                <STD>{formatter.format(employees.salary)}</STD>
+                                <STD>{employees.date} </STD>
                                 <STD>
                                     <Button
-                                        onClick={() => handleEdit(employeesData.id)}
+                                        onClick={() => handleEdit(employees.id)}
                                     >
                                         Edit
                                     </Button>
                                 </STD>
                                 <STD>
                                     <Button
-                                        onClick={() => handleDelete(employeesData.id)}
+                                        onClick={() => handleDelete(employees.id)}
                                     >
                                         Delete
                                     </Button>

@@ -6,15 +6,12 @@ import PropTypes from 'prop-types'
 
 
 const Header = ({ setIsAdding }) => {
-    const onClick = () => {
-        console.log('add clicked')
-    }
     return (
         <StyledHeader>
             <Container>
                 <Nav>
                     <h1>Employee management App</h1>
-                    <Button onClick={onClick}>ADD Employee</Button>
+                    <Button onClick={() => setIsAdding(true)}>ADD Employee</Button>
                 </Nav>
             </Container>
         </StyledHeader>
