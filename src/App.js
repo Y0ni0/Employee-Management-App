@@ -3,9 +3,10 @@ import { Container } from './components/styles/Container.styled'
 import Header from './components/Header';
 import GlobalStyles from './components/styles/Global';
 import Add from './components/Add';
-import React, { useState } from 'react'
+import { useState } from 'react'
 import List from './components/List';
-
+import { employees } from './components/Data';
+import { lightTheme } from './components/styles/theme';
 
 const theme = {
     colors: {
@@ -15,6 +16,8 @@ const theme = {
     }
 }
 function App() {
+    const [employeesData, setData] = useState(employees)
+
 
     const [isAdding, setIsAdding] = useState(false);
 
@@ -26,9 +29,8 @@ function App() {
                 <Header isAdding={setIsAdding} />
                 <Container>
                     <Add />
-                    <List />
+                    <List employeesData={employeesData} />
                 </Container>
-
             </>
         </ThemeProvider>
     )

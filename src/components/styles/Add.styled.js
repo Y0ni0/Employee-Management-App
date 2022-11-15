@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { lightTheme } from "./theme";
 
 
 export const StyledFormWrapper = styled.div`
@@ -9,7 +10,7 @@ export const StyledFormWrapper = styled.div`
 `
 
 export const StyledForm = styled.form`
-    background: ${({ theme }) => theme.colors.header};
+    background: ${lightTheme.bg};
     width: 100%;
     max-width: 450px;
     padding: 20px;
