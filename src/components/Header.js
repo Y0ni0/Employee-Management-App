@@ -18,8 +18,5 @@ const Header = ({ setIsAdding }) => {
     )
 }
 
-Header.propTypes = {
-    setIsAdding: PropTypes.bool,
-    onClick: PropTypes.func,
-}
+
 export default Header

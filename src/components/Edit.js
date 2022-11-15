@@ -1,5 +1,7 @@
+import { Button } from './styles/Button.styled';
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
+import { StyledButton, StyledForm, StyledFormWrapper, StyledInput, StyledFieldset } from './styles/Add.styled';
 
 function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
 
@@ -8,13 +10,14 @@ function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
     const [firstName, setFirstName] = useState(selectedEmployee.firstName);
     const [lastName, setLastName] = useState(selectedEmployee.lastName);
     const [email, setEmail] = useState(selectedEmployee.email);
+    const [gender, setGender] = useState(selectedEmployee.gender);
     const [salary, setSalary] = useState(selectedEmployee.salary);
     const [date, setDate] = useState(selectedEmployee.date);
 
     const handleUpdate = e => {
         e.preventDefault();
 
-        if (!firstName || !lastName || !email || !salary || !date) {
+        if (!firstName || !lastName || !email || !gender || !salary || !date) {
             return Swal.fire({
                 icon: 'error',
                 title: 'Error!',
@@ -28,6 +31,7 @@ function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
             firstName,
             lastName,
             email,
+            gender,
             salary,
             date
         };
@@ -52,11 +56,11 @@ function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
     };
 
     return (
-        <div className="small-container">
-            <form onSubmit={handleUpdate}>
+        <StyledFormWrapper>
+            <StyledForm onSubmit={handleUpdate}>
                 <h1>Edit Employee</h1>
                 <label htmlFor="firstName">First Name</label>
-                <input
+                <StyledInput
                     id="firstName"
                     type="text"
                     name="firstName"
@@ -64,7 +68,7 @@ function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
                     onChange={e => setFirstName(e.target.value)}
                 />
                 <label htmlFor="lastName">Last Name</label>
-                <input
+                <StyledInput
                     id="lastName"
                     type="text"
                     name="lastName"
@@ -72,15 +76,29 @@ function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
                     onChange={e => setLastName(e.target.value)}
                 />
                 <label htmlFor="email">Email</label>
-                <input
+                <StyledInput
                     id="email"
                     type="email"
                     name="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
+                <label htmlFor="gender">Gender</label>
+                <StyledFieldset>
+                    <legend>Gender</legend>
+                    <label>
+                        <input type='radio' value='female' name='gender'
+                            onChange={e => setGender(e.target.value)} />
+                        Female
+                    </label>
+                    <label>
+                        <input type='radio' value='male' name='gender'
+                            onChange={e => setGender(e.target.value)} />
+                        Male
+                    </label>
+                </StyledFieldset>
                 <label htmlFor="salary">Salary ($)</label>
-                <input
+                <StyledInput
                     id="salary"
                     type="number"
                     name="salary"
@@ -88,25 +106,22 @@ function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
                     onChange={e => setSalary(e.target.value)}
                 />
                 <label htmlFor="date">Date</label>
-                <input
+                <StyledInput
                     id="date"
                     type="date"
                     name="date"
                     value={date}
                     onChange={e => setDate(e.target.value)}
                 />
-                <div style={{ marginTop: '30px' }}>
-                    <input type="submit" value="Update" />
-                    <input
-                        style={{ marginLeft: '12px' }}
-                        className="muted-button"
+                <StyledButton>
+                    <Button type="submit" value="Update">Update</Button>
+                    <Button
                         type="button"
                         value="Cancel"
-                        onClick={() => setIsEditing(false)}
-                    />
-                </div>
-            </form>
-        </div>
+                        onClick={() => setIsEditing(false)}>Cancel</Button>
+                </StyledButton>
+            </StyledForm>
+        </StyledFormWrapper>
     );
 }
 
