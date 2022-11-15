@@ -12,7 +12,7 @@ export const StyledTableWrapper = styled.div`
     width: auto;
 `;
 export const STable = styled.table`
-    width: 80%;
+    width: 100%;
     background-color: ${lightTheme.bg};
     border-radius: 10px;
     box-sizing: border-box;
@@ -39,8 +39,8 @@ export const STH = styled.th`
     padding: 12px;
     color: ${lightTheme.text};
     text-transform: capitalize;
-    font-weight: 600;
-    font-size: 14px;  
+    font-weight: bolder;
+    font-size: 20px;  
     :not(:last-of-type) {
         border-right: 1px solid ${lightTheme.bg2};
     }
@@ -62,6 +62,8 @@ export const STBodyTR = styled.tr`
 export const STD = styled.td`
     padding: 6px;
     border: 1px solid ${lightTheme.bg};
-    font-size: 14px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-stretch: semi-expanded;
     
 `;
