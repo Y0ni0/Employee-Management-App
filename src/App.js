@@ -11,7 +11,7 @@ import Dashboard from './components/Dashboard';
 
 const theme = {
     colors: {
-        header: '#ebfbff',
+        header: 'rgb(214, 214, 214)',
         body: '#fff',
         footer: '#003333'
     }
