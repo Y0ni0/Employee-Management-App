@@ -11,7 +11,7 @@ const Header = ({ setIsAdding }) => {
             <Container>
                 <Nav>
                     <h1>Employee management App</h1>
-                    <Button onClick={() => setIsAdding(true)}>ADD Employee</Button>
+                    <div><Button onClick={() => setIsAdding(true)}>ADD Employee</Button></div>
                 </Nav>
             </Container>
         </StyledHeader>

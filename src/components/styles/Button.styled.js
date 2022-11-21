@@ -10,6 +10,7 @@ export const Button = styled.button`
     font-size: 16px;
     font-weight: 700;
     padding: 10px 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: ${({ bg }) => bg || '#fff'};
     color: ${({ color }) => color || '#333'};
 

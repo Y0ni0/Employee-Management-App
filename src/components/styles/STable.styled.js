@@ -10,6 +10,7 @@ export const StyledTableWrapper = styled.div`
     padding: 20px;
     margin: 30px;
     width: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 `;
 export const STable = styled.table`
     width: 100%;
@@ -63,7 +64,7 @@ export const STD = styled.td`
     padding: 6px;
     border: 1px solid ${lightTheme.bg};
     font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
     font-stretch: semi-expanded;
     
 `;
