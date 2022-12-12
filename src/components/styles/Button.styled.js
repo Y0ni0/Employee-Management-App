@@ -16,7 +16,7 @@ export const Button = styled.button`
 
     &:hover {
         opacity: 0.9;
-        transform: scale(0.98);
+        transform: scale(1.5px);
         background-color: ${lightTheme.bg3};
     }
 `
