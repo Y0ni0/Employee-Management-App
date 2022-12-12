@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { Button } from './styles/Button.styled';
 
 import { STable, STHead, STHeadTR, STH, STD, STBody, STBodyTR, StyledTableWrapper } from './styles/STable.styled';

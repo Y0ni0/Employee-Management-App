@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import { v } from "./variables";
 import { lightTheme } from "./theme";
 
 export const StyledTableWrapper = styled.div`

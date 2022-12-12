@@ -2,7 +2,7 @@ import React from 'react'
 import { StyledHeader, Nav } from './styles/Header.styled'
 import { Container } from './styles/Container.styled'
 import { Button } from './styles/Button.styled'
-import PropTypes from 'prop-types'
+
 
 
 const Header = ({ setIsAdding }) => {
